@@ -49,19 +49,14 @@ namespace tortoiseAndhare
         }
 
         /// <summary>
-        /// 產生0至100的亂數，判斷大於60，與終點的距離-1，反之，則+1。
+        /// 產生0至100的亂數。
         /// </summary>
-        public int Action()
+        public int Move()
         {
             Random random = new Random();
             int chance = random.Next(0, 101);
 
             return chance;
-        }
-
-        public void Move()
-        {
-
         }
 
         /// <summary>

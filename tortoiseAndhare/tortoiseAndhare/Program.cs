@@ -15,7 +15,6 @@ namespace tortoiseAndhare
                 Console.WriteLine("按任意按鍵開始遊戲");
                 Console.ReadKey();
 
-
                 Tor tor = new Tor("Tor", range);
                 Har har = new Har("Har", range);
 
@@ -28,13 +27,15 @@ namespace tortoiseAndhare
                     // 顯示使用者按了幾次按鍵
                     Show_Tme(i);
 
-                    
+                    /// 顯示角色剩餘的賽道、角色的名稱。
                     tor.Show_Circult();
                     har.Show_Circult();
 
+                    // 角色前進
                     tor.Behavior();
                     har.Behavior();
 
+                    // 確認角色是否勝利
                     if (tor.ChWinOrNot)
                     {
                         Console.WriteLine("恭喜！ {0} 為贏家！！！", tor.chName);
@@ -45,9 +46,6 @@ namespace tortoiseAndhare
                         Console.WriteLine("恭喜！ {0} 為贏家！！！", har.chName);
                         goto FINISH;
                     }
-                    
-
-
 
                     // 下一回合，等待使用者按按鍵
                     Console.ReadKey();
@@ -58,9 +56,6 @@ namespace tortoiseAndhare
                 // 遊戲結束
                 Console.WriteLine("按任意按鍵結束遊戲");
                 Console.ReadKey();
-
-
-
             }
         }
 
