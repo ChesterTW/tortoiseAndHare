@@ -1,0 +1,13 @@
+/Users/yutou/Projects/tortoiseAndhare/tortoiseAndhare/bin/Debug/netcoreapp3.1/tortoiseAndhare.deps.json
+/Users/yutou/Projects/tortoiseAndhare/tortoiseAndhare/bin/Debug/netcoreapp3.1/tortoiseAndhare.runtimeconfig.json
+/Users/yutou/Projects/tortoiseAndhare/tortoiseAndhare/bin/Debug/netcoreapp3.1/tortoiseAndhare.runtimeconfig.dev.json
+/Users/yutou/Projects/tortoiseAndhare/tortoiseAndhare/bin/Debug/netcoreapp3.1/tortoiseAndhare.dll
+/Users/yutou/Projects/tortoiseAndhare/tortoiseAndhare/bin/Debug/netcoreapp3.1/tortoiseAndhare.pdb
+/Users/yutou/Projects/tortoiseAndhare/tortoiseAndhare/obj/Debug/netcoreapp3.1/tortoiseAndhare.csproj.AssemblyReference.cache
+/Users/yutou/Projects/tortoiseAndhare/tortoiseAndhare/obj/Debug/netcoreapp3.1/tortoiseAndhare.AssemblyInfoInputs.cache
+/Users/yutou/Projects/tortoiseAndhare/tortoiseAndhare/obj/Debug/netcoreapp3.1/tortoiseAndhare.AssemblyInfo.cs
+/Users/yutou/Projects/tortoiseAndhare/tortoiseAndhare/obj/Debug/netcoreapp3.1/tortoiseAndhare.csproj.CoreCompileInputs.cache
+/Users/yutou/Projects/tortoiseAndhare/tortoiseAndhare/obj/Debug/netcoreapp3.1/tortoiseAndhare.dll
+/Users/yutou/Projects/tortoiseAndhare/tortoiseAndhare/obj/Debug/netcoreapp3.1/tortoiseAndhare.pdb
+/Users/yutou/Projects/tortoiseAndhare/tortoiseAndhare/obj/Debug/netcoreapp3.1/tortoiseAndhare.genruntimeconfig.cache
+/Users/yutou/Projects/tortoiseAndhare/tortoiseAndhare/obj/Debug/netcoreapp3.1/tortoiseAndhare.GeneratedMSBuildEditorConfig.editorconfig
