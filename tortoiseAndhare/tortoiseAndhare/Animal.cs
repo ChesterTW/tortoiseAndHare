@@ -18,6 +18,8 @@ namespace tortoiseAndhare
         /// </summary>
         public Boolean chWinOrNot { get; set; }
 
+        public int GoRate { get; set; }
+
         /// <summary>
         /// 建構函式 需String 和int
         /// </summary>
@@ -36,7 +38,7 @@ namespace tortoiseAndhare
         {
             get
             {
-                if (chRange == 0)
+                if (chRange <= 0)
                 {
                     chWinOrNot = true;
                 }
@@ -49,14 +51,44 @@ namespace tortoiseAndhare
         }
 
         /// <summary>
-        /// 產生0至100的亂數。
+        /// 60%機率前進
+        /// 20%機率休息
+        /// 20%機率後退
         /// </summary>
-        public int Move()
+        public void Action()
         {
-            Random random = new Random();
-            int chance = random.Next(0, 101);
+            Random rnd = new Random();
+            int rate = rnd.Next(1, 101);
+            if (rate > 40) Forward();
+            if (rate > 20 && rate < 40) Rest();
+            if (rate > 0 && rate < 20) GoBack();
+        }
 
-            return chance;
+        /// <summary>
+        /// 動物前進一步
+        /// </summary>
+        public void Forward()
+        {
+            chRange -= 1;
+            Console.WriteLine("{0} 前進一步",chName);
+        }
+
+        /// <summary>
+        /// 動物休息
+        /// </summary>
+        public void Rest()
+        {
+            chRange -= 0;
+            Console.WriteLine("{0} 在休息", chName);
+        }
+
+        /// <summary>
+        /// 動物後退一步
+        /// </summary>
+        public void GoBack()
+        {
+            chRange += 1;
+            Console.WriteLine("{0} 後退一步", chName);
         }
 
         /// <summary>
@@ -69,6 +101,7 @@ namespace tortoiseAndhare
                 Console.Write("=");
             }
             Console.WriteLine(chName);
+            Console.WriteLine(chName+ "剩餘：{0}",chRange);
 
         }
     }

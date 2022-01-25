@@ -9,30 +9,54 @@ namespace tortoiseAndhare
         }
 
         /// <summary>
-        /// 兔子的習性，50%的機率會呼叫 Jump()，50%機率會呼叫 Rest()。
-        /// Jump()：前進二步
-        /// Rest()：偷懶休息
+        /// 70%機率前跳
+        /// 20%機率休息
+        /// 10%機f率後跳
         /// </summary>
-        public void Behavior()
+        public new void Action()
         {
-            if (Move() > 50) Jump();
-            if (Move() < 50) Rest();
+            Random rnd = new Random();
+            GoRate = rnd.Next(1, 101);
+
+            if (GoRate > 30) Forward();
+            if (GoRate > 10 && GoRate < 30) Rest();
+            if (GoRate > 0 && GoRate < 10) GoBack();
         }
 
         /// <summary>
-        /// 前進二步
+        /// 60%機率前跳
+        /// 兔子前跳：50%機率兩步、50%機率一步
         /// </summary>
-        public void Jump()
+        public new void Forward()
         {
-            chRange -= 2;
+            if ((GoRate/2)>30)
+            {
+                chRange -= 2;
+                Console.WriteLine("{0} 跳了兩步", chName);
+            }
+            else
+            {
+                chRange -= 1;
+                Console.WriteLine("{0} 跳了一步", chName);
+            }
         }
 
         /// <summary>
-        /// 偷懶休息
+        /// 兔子休息
         /// </summary>
-        public void Rest()
+        public new void Rest()
         {
             chRange -= 0;
+            Console.WriteLine("{0} 在休息", chName);
+        }
+
+        /// <summary>
+        /// 兔子後跳一步
+        /// </summary>
+        public new void GoBack()
+        {
+            chRange += 1;
+            Console.WriteLine("{0} 後跳一步", chName);
         }
 
     }

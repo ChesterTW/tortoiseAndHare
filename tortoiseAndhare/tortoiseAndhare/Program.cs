@@ -15,6 +15,7 @@ namespace tortoiseAndhare
                 Console.WriteLine("按任意按鍵開始遊戲");
                 Console.ReadKey();
 
+
                 Tor tor = new Tor("Tor", range);
                 Har har = new Har("Har", range);
 
@@ -32,8 +33,8 @@ namespace tortoiseAndhare
                     har.Show_Circult();
 
                     // 角色前進
-                    tor.Behavior();
-                    har.Behavior();
+                    tor.Action();
+                    har.Action();
 
                     // 確認角色是否勝利
                     if (tor.ChWinOrNot)
