@@ -55,19 +55,19 @@ namespace tortoiseAndhare
         /// 20%機率休息
         /// 20%機率後退
         /// </summary>
-        public void Action()
+        public virtual void Action()
         {
             Random rnd = new Random();
             int rate = rnd.Next(1, 101);
             if (rate > 40) Forward();
-            if (rate > 20 && rate < 40) Rest();
-            if (rate > 0 && rate < 20) GoBack();
+            if (rate > 20 && rate <= 40) Rest();
+            if (rate > 0 && rate <= 20) GoBack();
         }
 
         /// <summary>
         /// 動物前進一步
         /// </summary>
-        public void Forward()
+        public virtual void Forward()
         {
             chRange -= 1;
             Console.WriteLine("{0} 前進一步",chName);
@@ -76,7 +76,7 @@ namespace tortoiseAndhare
         /// <summary>
         /// 動物休息
         /// </summary>
-        public void Rest()
+        public virtual void Rest()
         {
             chRange -= 0;
             Console.WriteLine("{0} 在休息", chName);
@@ -85,7 +85,7 @@ namespace tortoiseAndhare
         /// <summary>
         /// 動物後退一步
         /// </summary>
-        public void GoBack()
+        public virtual void GoBack()
         {
             chRange += 1;
             Console.WriteLine("{0} 後退一步", chName);

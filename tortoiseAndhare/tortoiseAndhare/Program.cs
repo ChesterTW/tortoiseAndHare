@@ -15,9 +15,14 @@ namespace tortoiseAndhare
                 Console.WriteLine("按任意按鍵開始遊戲");
                 Console.ReadKey();
 
+                var xx = new List<Animal>()
+                {
+                    new Tor("Tor",range),
+                    new Har("Har",range)
+                };
 
-                Tor tor = new Tor("Tor", range);
-                Har har = new Har("Har", range);
+                //Tor tor = new Tor("Tor", range);
+                //Har har = new Har("Har", range);
 
                 // 遊戲執行
                 for (int i = 0;i>-1; i++)
@@ -28,16 +33,27 @@ namespace tortoiseAndhare
                     // 顯示使用者按了幾次按鍵
                     Show_Tme(i);
 
+                    foreach(var Detail in xx)
+                    {
+                        Detail.Show_Circult();
+                        Detail.Action();
+                        if (Detail.ChWinOrNot)
+                        {
+                            Console.WriteLine("恭喜！ {0} 為贏家！！！", Detail.chName);
+                            goto FINISH;
+                        }
+                    }
+
                     /// 顯示角色剩餘的賽道、角色的名稱。
-                    tor.Show_Circult();
-                    har.Show_Circult();
+                    //tor.Show_Circult();
+                    //har.Show_Circult();
 
                     // 角色前進
-                    tor.Action();
-                    har.Action();
+                    //tor.Action();
+                    //har.Action();
 
                     // 確認角色是否勝利
-                    if (tor.ChWinOrNot)
+                    /*if (tor.ChWinOrNot)
                     {
                         Console.WriteLine("恭喜！ {0} 為贏家！！！", tor.chName);
                         goto FINISH;
@@ -46,7 +62,7 @@ namespace tortoiseAndhare
                     {
                         Console.WriteLine("恭喜！ {0} 為贏家！！！", har.chName);
                         goto FINISH;
-                    }
+                    }*/
 
                     // 下一回合，等待使用者按按鍵
                     Console.ReadKey();
