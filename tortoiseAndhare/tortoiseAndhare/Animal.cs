@@ -51,45 +51,24 @@ namespace tortoiseAndhare
         }
 
         /// <summary>
-        /// 60%機率前進
-        /// 20%機率休息
-        /// 20%機率後退
+        /// 動物機率
         /// </summary>
-        public virtual void Action()
-        {
-            Random rnd = new Random();
-            int rate = rnd.Next(1, 101);
-            if (rate > 40) Forward();
-            if (rate > 20 && rate <= 40) Rest();
-            if (rate > 0 && rate <= 20) GoBack();
-        }
+        public virtual void Action() { }
 
         /// <summary>
-        /// 動物前進一步
+        /// 動物前進
         /// </summary>
-        public virtual void Forward()
-        {
-            chRange -= 1;
-            Console.WriteLine("{0} 前進一步",chName);
-        }
+        public virtual void Forward() { }
 
         /// <summary>
         /// 動物休息
         /// </summary>
-        public virtual void Rest()
-        {
-            chRange -= 0;
-            Console.WriteLine("{0} 在休息", chName);
-        }
+        public virtual void Rest() { }
 
         /// <summary>
-        /// 動物後退一步
+        /// 動物後退
         /// </summary>
-        public virtual void GoBack()
-        {
-            chRange += 1;
-            Console.WriteLine("{0} 後退一步", chName);
-        }
+        public virtual void GoBack() { }
 
         /// <summary>
         /// 顯示角色剩餘的賽道、角色的名稱。

@@ -15,9 +15,9 @@ namespace tortoiseAndhare
         public override void Action()
         {
             Random rnd = new Random();
-            int rate = rnd.Next(1, 101);
-            if (rate > 20) Forward();
-            if (rate <= 20) Rest();
+            GoRate = rnd.Next(1, 101);
+            if (GoRate > 20) Forward();
+            if (GoRate <= 20) Rest();
         }
 
         /// <summary>
