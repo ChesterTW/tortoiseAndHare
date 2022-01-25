@@ -1,25 +1,23 @@
 ﻿using System;
 namespace tortoiseAndhare
 {
-    public class Animal
+    abstract class Animal
     {
         /// <summary>
         /// 角色名稱
         /// </summary>
         public string chName { get; set; }
-
         /// <summary>
         /// 角色與終點的距離
         /// </summary>
         public int chRange { get; set; }
+        
 
         /// <summary>
         /// 角色是否勝利
         /// </summary>
         public Boolean chWinOrNot { get; set; }
-
         public int GoRate { get; set; }
-
         /// <summary>
         /// 建構函式 需String 和int
         /// </summary>
@@ -30,7 +28,6 @@ namespace tortoiseAndhare
             chName = name;
             chRange = range;
         }
-
         /// <summary>
         /// 確認該角色是否勝利
         /// </summary>
@@ -53,22 +50,19 @@ namespace tortoiseAndhare
         /// <summary>
         /// 動物機率
         /// </summary>
-        public virtual void Action() { }
-
+        public abstract void Action();
         /// <summary>
         /// 動物前進
         /// </summary>
-        public virtual void Forward() { }
-
+        public abstract void Forward();
         /// <summary>
         /// 動物休息
         /// </summary>
-        public virtual void Rest() { }
-
+        public abstract void Rest();
         /// <summary>
         /// 動物後退
         /// </summary>
-        public virtual void GoBack() { }
+        public abstract void GoBack();
 
         /// <summary>
         /// 顯示角色剩餘的賽道、角色的名稱。

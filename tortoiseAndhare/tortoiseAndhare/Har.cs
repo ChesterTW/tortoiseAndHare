@@ -1,7 +1,7 @@
 ﻿using System;
 namespace tortoiseAndhare
 {
-    public class Har:Animal
+    class Har : Animal
     {
         public Har(string name, int range) : base(name, range)
         {
@@ -9,17 +9,17 @@ namespace tortoiseAndhare
         }
 
         /// <summary>
-        /// 70%機率前跳
-        /// 20%機率休息
-        /// 10%機f率後跳
+        /// 60%機率前跳
+        /// 30%機率休息
+        /// 10%機率後跳
         /// </summary>
         public override void Action()
         {
             Random rnd = new Random();
             GoRate = rnd.Next(1, 101);
 
-            if (GoRate > 30) Forward();
-            if (GoRate > 10 && GoRate <= 30) Rest();
+            if (GoRate > 40) Forward();
+            if (GoRate > 10 && GoRate <= 40) Rest();
             if (GoRate > 0 && GoRate <= 10) GoBack();
         }
 

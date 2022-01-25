@@ -1,7 +1,7 @@
 ﻿using System;
 namespace tortoiseAndhare
 {
-    public class Tor:Animal
+    class Tor : Animal
     {
         public Tor(string name, int range) : base(name, range)
         {
@@ -28,6 +28,12 @@ namespace tortoiseAndhare
             chRange -= 1;
             Console.WriteLine("{0} 爬了一步", chName);
         }
+
+        public override void GoBack()
+        {
+            throw new NotImplementedException();
+        }
+
 
         /// <summary>
         /// 烏龜休息
